@@ -2,6 +2,11 @@
 ## functions do
 
 ## Write a short comment describing this function
+## This function has 4 "methods" that can be called directly or are used with cacheSolve
+##  - set(y) : this method will overwrite the current matrix with a new matrix
+##  - get() : returns the current matrix
+##  - setinverse() : called from cacheSolve, creates the inverse matrix and stores it
+##  - getinverse() : returns the inverse matrix
 
 makeCacheMatrix <- function(x = matrix()) {
 
@@ -23,6 +28,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
+## This function checks to see if the inverse has already been created.  If yes, it
+##   retrieves it from the cache.  Otherwise it creates the inverse, stores it, and returns it.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
